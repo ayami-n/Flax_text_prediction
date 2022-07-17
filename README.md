@@ -9,6 +9,7 @@ Counterclaim - a claim that refutes another claim or gives an opposing reason to
 Rebuttal - a claim that refutes a counterclaim  
 Evidence - ideas or examples that support claims, counterclaims, or rebuttals.  
 Concluding Statement - a concluding statement that restates the claims  
+
 Your task is to predict the quality rating of each discourse element. Human readers rated each rhetorical or argumentative element, in order of increasing quality, as one of:  
 
 Ineffective  
@@ -30,9 +31,9 @@ discourse_text - Text of discourse element.
 discourse_type - Class label of discourse element.  
 discourse_type_num - Enumerated class label of discourse element.  
 discourse_effectiveness - Quality rating of discourse element, the target.  
+
 Example Test Data  
 To help you author submission code, we include a few example instances selected from the test set. When you submit your notebook for scoring, this example data will be replaced by the actual test data, including the sample_submission.csv file.  
 
 test/ - A folder containing an example essay from the test set. The actual test set comprises about 3,000 essays in a format similar to the training set essays. The test set essays are distinct from the training set essays.  
 test.csv - Annotations for the test set essays, containing all of the fields of train.csv except the target, discourse_effectiveness.  
-sample_submission.csv - A sample submission file in the correct format. See the Evaluation page for more details.
