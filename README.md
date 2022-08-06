@@ -1,28 +1,30 @@
-# Flax_text_prediction
+# NLP/NLU: Flax with Parallel Learnig on TPU
 
-The dataset presented here contains argumentative essays written by U.S students in grades 6-12. These essays were annotated by expert raters for discourse elements commonly found in argumentative writing:  
+## Motivation
+Natural Language Processing models, such as BERT, are state-of-the-art in AI. However, those models are slow when we train (including transfer learning) them with our datasets. There are many reasons for the cause being slow. One of the main reasons is that the model is expensive because we usually use a single GPU, regardless of the spec. Simply, to solve the problem, we train a model in parallel. However, Pytorch and TensorFlow are not capable of the parallel learning in deep learning, but Flax and Jax are. This project demonstrates how fast Flax and Jax can finish their training on TPU and how to implement them.
 
-Lead - an introduction that begins with a statistic, a quotation, a description, or some other device to grab the reader’s attention and point toward the thesis  
-Position - an opinion or conclusion on the main question  
-Claim - a claim that supports the position  
-Counterclaim - a claim that refutes another claim or gives an opposing reason to the position  
-Rebuttal - a claim that refutes a counterclaim  
-Evidence - ideas or examples that support claims, counterclaims, or rebuttals.  
-Concluding Statement - a concluding statement that restates the claims  
+### 1.Requirements
 
-Your task is to predict the quality rating of each discourse element. Human readers rated each rhetorical or argumentative element, in order of increasing quality, as one of:  
+Environments:
+- Google Colab
+- Python ==> 3.7+
 
-Ineffective  
-Adequate  
-Effective  
-For more information on the annotation scheme and scoring rubric, please see: Argumentation Annotation Scheme and Descriptions.  
+Libraries:
+- Flax
+- Jax
+- Optax
+- Transformers
+- Datasets
 
-Note that this is a Code Competition, in which you will submit code that will be run against an unseen test set. The unseen test set comprises about 3,000 essays. A small public test sample has been provided for testing your submission notebooks.  
+```shell
+!pip install git+https://github.com/huggingface/transformers.git
+!pip install flax
+!pip install git+https://github.com/deepmind/optax.git
+!pip install datasets
+!pip install transformers
+```
 
-This dataset is a subset of the dataset from the Feedback Prize - Evaluating Student Writing competition. You are welcome to make use of this earlier dataset, if you like.  
-
-Training Data  
-The training set consist of a .csv file containing the annotated discourse elements each essay, including the quality ratings, together with .txt files containing the full text of each essay. It is important to note that some parts of the essays will be unannotated (i.e., they do not fit into one of the classifications above) and they will lack a quality rating. We do not include the unannotated parts in train.csv.  
+### 2.Datasets Explain
 
 train.csv - Contains the annotated discourse elements for all essays in the test set.  
 discourse_id - ID code for discourse element  
@@ -30,10 +32,28 @@ essay_id - ID code for essay response. This ID code corresponds to the name of t
 discourse_text - Text of discourse element.  
 discourse_type - Class label of discourse element.  
 discourse_type_num - Enumerated class label of discourse element.  
-discourse_effectiveness - Quality rating of discourse element, the target.  
+discourse_effectiveness - Quality rating of discourse element, the target. 
 
-Example Test Data  
-To help you author submission code, we include a few example instances selected from the test set. When you submit your notebook for scoring, this example data will be replaced by the actual test data, including the sample_submission.csv file.  
+To predict the quality rating of each discourse element.<br>
+Ineffective [0]  
+Adequate [1]  
+Effective [2]
 
-test/ - A folder containing an example essay from the test set. The actual test set comprises about 3,000 essays in a format similar to the training set essays. The test set essays are distinct from the training set essays.  
-test.csv - Annotations for the test set essays, containing all of the fields of train.csv except the target, discourse_effectiveness.  
+*More details: [Here](https://www.kaggle.com/competitions/feedback-prize-effectiveness/overview)
+
+### 3.Flax Aspects
+
+#### Q: What is FLax?
+Flax is a high-performance neural network library for JAX that is designed for flexibility. The primary distinction between Flax and Pytorch or TensorFlow is that Flax is stateless and Pytorch and TensorFlow are stateful. The left-below picture shows that Python can recongnize the model's weights when we initialize the object and store them inside of the module (class). Python, on the other hand, is unable to recognize the weight of the Flax model because Fals is dependent on Jax. Jax expects no side effects due to the pure functional basis. Then, the right-bottom picture shows that Python recongnize the details, such as weights, of the Flax model during the forward passing, and we also need to pass the model (state).
+<img src="./src/flax.png" alt="what is flax" title="what is flax">
+<img src="./src/forward.png" alt="forwarding with flax" title="forwarding with flax">
+
+
+
+#### Q: What is TPU and Why TPU?
+
+### 4.Demo
+
+### 5.Results
+
+### 6.Future Study
