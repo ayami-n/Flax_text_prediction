@@ -45,8 +45,11 @@ Effective [2]
 
 #### Q: What is FLax?
 Flax is a high-performance neural network library for JAX that is designed for flexibility. The primary distinction between Flax and Pytorch or TensorFlow is that Flax is stateless and Pytorch and TensorFlow are stateful. The left-below picture shows that Python can recongnize the model's weights when we initialize the object and store them inside of the module (class). Python, on the other hand, is unable to recognize the weight of the Flax model because Fals is dependent on Jax. Jax expects no side effects due to the pure functional basis. Then, the right-bottom picture shows that Python recongnize the details, such as weights, of the Flax model during the forward passing, and we also need to pass the model (state).<br>
-<img src="./src/flax.png" alt="what is flax" title="what is flax" width="500" height="250">
-<img src="./src/forward.png" alt="forwarding with flax" title="forwarding with flax" width="500" height="250"><br>
+
+<p align="center">
+<img src="./src/flax.png" alt="what is flax" title="what is flax" width="400" height="250">
+<img src="./src/forward.png" alt="forwarding with flax" title="forwarding with flax" width="400" height="250"><br>
+</p>
 
 #### Q: What is TPU and Why TPU?
 TPU is a specialized processing unit by Google that was built for two purposes.First, Google used it to help improve their own products such as image search, translation, AlphaGo and other services by providing better machine learning results. Second, they released this powerful hardware into the cloud so other people can use it to get better results in their machine learning tasks. [Source](https://mygraphicscard.com/tpu-vs-gpu/)
