@@ -52,7 +52,7 @@ Flax is a high-performance neural network library for JAX that is designed for f
 </p>
 
 #### Q: What is TPU and Why TPU?
-TPU is a specialized processing unit by Google that was built for two purposes.First, Google used it to help improve their own products such as image search, translation, AlphaGo and other services by providing better machine learning results. Second, they released this powerful hardware into the cloud so other people can use it to get better results in their machine learning tasks. [Source](https://mygraphicscard.com/tpu-vs-gpu/)
+TPU is a specialized processing unit by Google that was built for two purposes. First, Google used it to help improve their own products such as image search, translation, AlphaGo and other services by providing better machine learning results. Second, they released this powerful hardware into the cloud so other people can use it to get better results in their machine learning tasks. [Source](https://mygraphicscard.com/tpu-vs-gpu/)
 <p align="center">
 <img src="./src/tpu.png" alt="what is TPU" title="what is TPU" width="500" height="250">
 </p>
