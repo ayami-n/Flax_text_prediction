@@ -44,7 +44,7 @@ Effective [2]
 ### 3.Flax Aspects
 
 #### Q: What is FLax?
-Flax is a high-performance neural network library for JAX that is designed for flexibility. The primary distinction between Flax and Pytorch or TensorFlow is that Flax is stateless and Pytorch and TensorFlow are stateful. The left-below picture shows that Python can recongnize the model's weights when we initialize the object and store them inside of the module (class). Python, on the other hand, is unable to recognize the weight of the Flax model because Fals is dependent on Jax. Jax expects no side effects due to the pure functional basis. Then, the right-bottom picture shows that Python recongnize the details, such as weights, of the Flax model during the forward passing, and we also need to pass the model (state).<br>
+Flax is a high-performance neural network library for JAX that is designed for flexibility. The primary distinction between Flax and Pytorch or TensorFlow is that Flax is stateless and Pytorch and TensorFlow are stateful. The left-below picture shows that Python can recongnize the model's weights when we initialize the object and store them inside of the module (class). Python, on the other hand, is unable to recognize the weight of the Flax model because Flax is dependent on Jax. Jax expects no side effects due to the pure functional basis. Then, the right-bottom picture shows that Python recongnize the details, such as weights, of the Flax model during the forward passing, and we also need to pass the model (state).<br>
 
 <p align="center">
 <img src="./src/flax.png" alt="what is flax" title="what is flax" width="400" height="250">
