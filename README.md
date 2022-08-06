@@ -56,7 +56,7 @@ TPU is a specialized processing unit by Google that was built for two purposes. 
 <p align="center">
 <img src="./src/tpu.png" alt="what is TPU" title="what is TPU" width="500" height="250">
 </p>
-In comparison with the CPU, GPU, and TPU, the above picture proves that TPU is extremely quicker than others because TPU is designed for deep learning. On top of that, TPUs read their data from their High-Bandwidth Memory, or HBM, before training to maximize the model performance. During the training, the CPU orders to the TPU, "Please train on batch number i", for some i, since the TPU already has this batch stored in its HBM. We are able to see the TPU potential when we train with heavy models such as NLP. Thus, we use the TPU in this project<br>
+In comparison with the CPU, GPU, and TPU, the above picture proves that TPU is extremely quicker than others because TPU is designed for deep learning. On top of that, TPUs read their data from their High-Bandwidth Memory, or HBM, before training to maximize the model performance. During the training, the CPU orders to the TPU, "Please train on batch number i", for some i, since the TPU already has this batch stored in its HBM. We are able to see the TPU potential when we train with heavy models such as NLP. Thus, we use the TPU in this project [source](https://gist.github.com/fedelebron/b7be87a4feb88786cc142ef99931ff06#file-dog-classifier-ipynb)<br>
 <img src="./src/tpu2.png" alt="behind of TPU" title="behind of TPU">
 
 ### 4.Demo
