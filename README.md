@@ -1,4 +1,4 @@
-# NLP/NLU: Flax with Parallel Learnig on TPU
+# NLP/NLU: Flax with Parallel Learning on TPU
 
 ## Motivation
 Natural Language Processing models, such as BERT, are state-of-the-art in AI. However, those models are slow when we train (including transfer learning) them with our datasets. There are many reasons for the cause being slow. One of the main reasons is that the model is expensive because we usually use a single GPU, regardless of the spec. Simply, to solve the problem, we train a model in parallel. However, Pytorch and TensorFlow are not good at the parallel learning in deep learning, but Flax and Jax are. This project demonstrates how fast Flax and Jax can finish their training on TPU and how to implement them.
