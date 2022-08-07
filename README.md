@@ -67,9 +67,10 @@ Pytorch: [GPU] NVIDIA Tesla T4 16 GB<br>
 Flax: [TPU] v2-8 8 cores 64 GB<br>
 
 [Condition]<br>
-We re-trained the enite BERT to compare the speed between Pytorch and Flax.<br>
+Re-trained the enite BERT to compare the speed between Pytorch and Flax.<br>
 Both batch size are 32 for training.<br>
 95% of the data is for training.
+Token size is 128.
 
 [Results]<br>
 | Neural Network |  Total Time (Minutes) | Epoch |
@@ -78,4 +79,5 @@ Both batch size are 32 for training.<br>
 | Flax | 49 | 5 |
 
 ### 6.Future Study
-Flax proved that they are capable of finishing their training time quicker than Pytorch. When we use the free version of Google Colab, the TPU environments sometimes become unavailable. So, we need to pay for it if we need the TPU.
+Flax proved that they are capable of finishing their training time quicker than Pytorch. When we use the free version of Google Colab, the TPU environments sometimes become unavailable. So, we need to pay for it if we need the TPU.<br>
+In the future, we can increase token sizes to 256, 512, and so on to compare with training time between Flax and Pytorch.
