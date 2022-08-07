@@ -69,8 +69,8 @@ Flax: [TPU] v2-8 8 cores 64 GB<br>
 [Condition]<br>
 Re-trained the enite BERT to compare the speed between Pytorch and Flax.<br>
 Both batch size are 32 for training.<br>
-95% of the data is for training.
-Token size is 128.
+95% of the data is for training.<br>
+Token size is 128.<br>
 
 [Results]<br>
 | Neural Network |  Total Time (Minutes) | Epoch |
