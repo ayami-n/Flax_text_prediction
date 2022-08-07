@@ -73,10 +73,10 @@ Both batch size are 32 for training.<br>
 Token size is 128.<br>
 
 [Results]<br>
-| Neural Network |  Total Time (Minutes) | Epoch |
-|:-----|:--------:|------:|
-| Pytorch | 60 | 5 |
-| Flax | 49 | 5 |
+| Neural Network |  Total Time (Minutes) | Epoch | Eval Accuracy |
+|:-----|:--------:|:--------:|------:|
+| Pytorch | 60 | 5 | 0.645 |
+| Flax | 49 | 5 | 0.667 |
 
 ### 6.Future Study
 Flax proved that they are capable of finishing their training time quicker than Pytorch. When we use the free version of Google Colab, the TPU environments sometimes become unavailable. So, we need to pay for it if we need the TPU.<br>
