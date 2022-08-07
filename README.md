@@ -62,6 +62,7 @@ In comparison with the CPU, GPU, and TPU, the above picture proves that TPU is e
 ### 4.Demo
 
 ### 5.Environemts and Results:
+[Environemts]<br>
 Pytorch: [GPU] NVIDIA Tesla T4 16 GB<br>
 Flax: [TPU] v2-8 8 cores 64 GB<br>
 
@@ -70,6 +71,7 @@ We re-trained the enite BERT to compare the speed between Pytorch and Flax.<br>
 Both batch size are 32 for training.<br>
 95% of the data is for training.
 
+[Results]<br>
 | Neural Network |  Total Time (Minutes) | Epoch |
 |:-----|:--------:|------:|
 | Pytorch | 60 | 5 |
