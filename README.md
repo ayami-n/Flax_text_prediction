@@ -61,6 +61,8 @@ In comparison with the CPU, GPU, and TPU, the above picture proves that TPU is e
 
 ### 4.Demo
 
+https://user-images.githubusercontent.com/52090852/183279705-a13234f0-ceef-4059-b305-0a52fb887d35.mp4
+
 ### 5.Environemts and Results:
 [Environemts]<br>
 Pytorch: [GPU] NVIDIA Tesla T4 16 GB<br>
@@ -73,10 +75,10 @@ Both batch size are 32 for training.<br>
 Token size is 128.<br>
 
 [Results]<br>
-| Neural Network |  Total Time (Minutes) | Epoch |
-|:-----|:--------:|------:|
-| Pytorch | 60 | 5 |
-| Flax | 49 | 5 |
+| Neural Network |  Total Time (Minutes) | Epoch | Eval Accuracy |
+|:-----|:--------:|:--------:|------:|
+| Pytorch | 60 | 5 | 0.645 |
+| Flax | 49 | 5 | 0.678 |
 
 ### 6.Future Study
 Flax proved that they are capable of finishing their training time quicker than Pytorch. When we use the free version of Google Colab, the TPU environments sometimes become unavailable. So, we need to pay for it if we need the TPU.<br>
